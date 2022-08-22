@@ -1,0 +1,115 @@
+@import url(https://fonts.googleapis.com/earlyaccess/cwtexkai.css);
+
+#print-preview {
+  position: relative;
+  background-color: #555;
+}
+#print-preview .body {
+  padding-bottom: 80px;
+  height: calc(100vh - 226px);
+  overflow-y: scroll;
+}
+#print-preview .afloat-tool {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  display: inline-block;
+  z-index: 1;
+}
+#print-preview .afloat-count {
+  position: absolute;
+  right: 35px;
+  bottom: 8px;
+  padding: 2px 8px;
+  background-color: rgba(0,0,0,.2);
+  color: white;
+}
+
+#print-preview .tool-btn
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  margin: 12px;
+  width: 1.6rem;
+  height: 1.6rem;
+  background-color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+#print-preview .print-page {
+  position: relative;
+  display: block;
+  margin: 20px auto;
+  height: auto;
+  background-color: white;
+  border: 1px solid silver;
+  box-shadow: 1px 1px 5px rgba(50,50,50,.4);
+  transition: width .32s linear;
+  /* https://fonts.googleapis.com/earlyaccess/cwtexkai.css */
+  font-family: 'cwTeXKai', serif;
+}
+#print-preview .print-page .page-number {
+  position: absolute;
+  top: 10px;
+  right: 2px;
+  padding: 3px 8px 3px 18px;
+  text-align: left;
+  background-color: rgba(0,0,0,.8);
+  color: white;
+  border-radius: 6px;
+  opacity: 0;
+  transform: translateX(0);
+  transition: transform .24s linear, opacity .20s linear;
+}
+#print-preview .print-page:hover .page-number {
+  transform: translateX(100%);
+  opacity: 1;
+}
+
+#print-preview.sz-0 .print-page { width: 25%; }
+#print-preview.sz-1 .print-page { width: 30%; }
+#print-preview.sz-2 .print-page { width: 35%; }
+#print-preview.sz-3 .print-page { width: 40%; }
+#print-preview.sz-4 .print-page { width: 45%; }
+#print-preview.sz-5 .print-page { width: 50%; }
+#print-preview.sz-6 .print-page { width: 55%; }
+#print-preview.sz-7 .print-page { width: 60%; }
+#print-preview.sz-8 .print-page { width: 65%; }
+#print-preview.sz-9 .print-page { width: 70%; }
+#print-preview.sz-10 .print-page { width: 75%; }
+#print-preview.sz-11 .print-page { width: 80%; }
+#print-preview.sz-12 .print-page { width: 85%; }
+#print-preview.sz-13 .print-page { width: 90%; }
+#print-preview.sz-14 .print-page { width: 95%; }
+
+#print-preview .print-page svg {
+  position: relative;
+  z-index: 2;
+}
+
+/*****************************************/
+.adj-hid-drop {
+  position: relative;
+}
+.adj-hid-drop .head {
+  margin: 0 5px 12px 5px;
+}
+.adj-hid-drop .frame {
+  margin-top: 12px;
+}
+.adj-hid-drop .frame > .box {
+  position: absolute;
+  right: 0;
+  display: none;
+  padding: 12px 20px;
+  background-color: white;
+  z-index: 100;
+}
+.adj-hid-drop:hover .frame > .box {
+  display: block;
+}
